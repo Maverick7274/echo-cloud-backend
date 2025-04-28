@@ -9,12 +9,12 @@ dotenv.config();
 
 // Create a nodemailer transporter using environment SMTP configuration
 const transporter = nodemailer.createTransport({
-	host: process.env.SMTP_HOST, // SMTP server host, e.g., "smtp.gmail.com"
-	port: Number(process.env.SMTP_PORT), // SMTP port, e.g., 587 for TLS or 465 for SSL
+	host: process.env.EMAIL_HOST, // SMTP server host, e.g., "smtp.gmail.com"
+	port: Number(process.env.EMAIL_PORT), // SMTP port, e.g., 587 for TLS or 465 for SSL
 	secure: false, // Use TLS (false for port 587, true for port 465)
 	auth: {
-		user: process.env.SMTP_USER, // SMTP username
-		pass: process.env.SMTP_PASS, // SMTP password
+		user: process.env.EMAIL_USER, // SMTP username
+		pass: process.env.EMAIL_PASS, // SMTP password
 	},
 });
 
